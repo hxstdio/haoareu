@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "user-info": "../../components/user-info/user-info",
+    "photo": "../../components/photo/photo"
+  },
+  "navigationBarTitleText": "关于"
+}

@@ -1,0 +1,30 @@
+<scroll-view class="article-container {{isFullContainer ? 'full-container' : ''}}" scroll-y wx:if="{{isUseScrollView}}">
+  <article-title date="{{date}}" weather="{{weather}}" temperature="{{temperature}}" />
+  <photo-container wx:if="{{mediaType === 'image'}}" desc="{{city}}" autoResetHeight="{{isAutoResetHeight}}" imgUrl="{{mediaUrl}}" bindtap="onHandlePreview" />
+  <video-container wx:if="{{mediaType === 'video'}}" videoUrl="{{mediaUrl}}" />
+  <view class="scroll-content-wrap">
+    <text class="content extend">{{content}}</text>
+  </view>
+  <view class="action-bar">
+    <text class="extend-txt"> </text>
+    <view class="like-wrap">
+      <image animation="{{animationObj}}" data-id="{{articleData._id}}" class="like-icon" src="{{likeIcon}}" mode="scaleToFill" bindtap="onHandleTapLike"></image>
+      <text class="like-count">{{likeCount}}</text>
+    </view>
+  </view>
+</scroll-view>
+<view wx:else class="article-container {{isFullContainer ? 'full-container' : ''}}">
+  <article-title date="{{date}}" weather="{{weather}}" temperature="{{temperature}}" />
+  <photo-container wx:if="{{mediaType === 'image'}}" desc="{{city}}" autoResetHeight="{{isAutoResetHeight}}" imgUrl="{{mediaUrl}}" bindtap="onHandlePreview" />
+  <video-container wx:if="{{mediaType === 'video'}}" videoUrl="{{mediaUrl}}" />
+  <view class="content-wrap {{isExtendBtnShow ? '' : 'extend'}}">
+    <text id="{{date}}" class="content">{{content}}</text>
+  </view>
+  <view class="action-bar">
+    <text class="extend-txt" bindtap="onHandleExtend">{{isExtendBtnShow ? '展开全文' : ' '}}</text>
+    <view class="like-wrap">
+      <image animation="{{animationObj}}" data-id="{{articleData._id}}" class="like-icon" src="{{likeIcon}}" mode="scaleToFill" bindtap="onHandleTapLike"></image>
+      <text class="like-count">{{likeCount}}</text>
+    </view>
+  </view>
+</view>

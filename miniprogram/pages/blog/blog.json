@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "article": "../../components/article/article",
+    "tool-bar": "../../components/tool-bar/tool-bar",
+    "result": "../../components/result/result"
+  }
+}

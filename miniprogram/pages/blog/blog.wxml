@@ -1,0 +1,14 @@
+<view class="blog-container">
+  <view wx:if="{{isError}}" class="result-container">
+    <result msg="你还没有日志哦，去创建一个吧"></result>
+  </view>
+  <scroll-view wx:else class="article-list" scroll-y bindscroll="onHandleScroll" bindscrolltolower="onHandleLoadMore">
+    <view class="article-container" wx:for="{{list}}" wx:key="_id">
+      <article articleData="{{item}}" isAutoResetHeight="{{true}}" />
+    </view>
+    <view wx:if="{{list.length}}" class="bottom-line">
+      <text class="bottom-text">我是有底线的</text>
+    </view>
+  </scroll-view>
+  <tool-bar hide="{{isHideToolBar}}" />
+</view>

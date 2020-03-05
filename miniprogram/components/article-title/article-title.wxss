@@ -1,0 +1,26 @@
+.title-bar-container{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 80rpx;
+  padding: 5rpx 12rpx;
+
+  background-color: #FFFFFF;
+  border-bottom: 1rpx solid #F2F3F4;
+}
+
+.day{
+  font-size: 56rpx;
+  font-weight: bold;
+  margin-right: 12rpx;
+}
+
+.month, .info{
+  font-size: 28rpx;
+}
+
+.weather-icon{
+  width: 56rpx;
+  height: 56rpx;
+  margin-right: 6rpx;
+}

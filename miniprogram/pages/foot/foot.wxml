@@ -1,0 +1,26 @@
+<view class="foot-container">
+  <map 
+    id="myMap"
+    class="map"
+    longitude="{{center.longitude}}"
+    latitude="{{center.latitude}}"
+    scale="{{scale}}"
+    markers="{{markers}}"
+    include-points="{{includePoints}}"
+    bindmarkertap="onHandleMarkerTap"
+  ></map>
+  <view class="content-container" animation="{{animationObj}}">
+    <view class="detail">
+      <article wx:if="{{articleData}}" isUseScrollView="{{true}}" isFullContainer="{{true}}" isAutoResetHeight="{{true}}" articleData="{{articleData}}"></article>
+      <view wx:else>
+        <text>暂时没有数据哦</text>
+      </view>
+    </view>
+    <view class="tool" bindtap="onHandleClose">
+      <image class="close-icon" src="/images/close.png" mode="scaleToFill"></image>
+    </view>
+  </view>
+  <view wx:if="{{isError}}" class="error-container">
+    <result msg="{{errorMsg}}"></result>
+  </view>
+</view>

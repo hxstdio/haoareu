@@ -1,0 +1,32 @@
+.blog-container {
+  width: 100%;
+  height: 100%;
+}
+
+.article-list{  
+  height: 100%;
+  background-color: #F2F3F4;
+}
+
+.article-container{
+  margin-bottom: 24rpx;
+}
+
+.bottom-line{
+  background-color: #F2F3F4;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1rpx dashed #CCC;
+}
+
+.bottom-text{
+  font-size: 24rpx;
+}
+
+.result-container{
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}

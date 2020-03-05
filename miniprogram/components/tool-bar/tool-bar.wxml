@@ -1,0 +1,14 @@
+<view class="tool-bar-container {{hide ? 'hide' : ''}}">
+  <view class="item" data-type="blog" bindtap="onHandleTap">
+    <image class="icon" src="../../images/list.png" />
+    <!-- <text class="label">日志</text> -->
+  </view>
+  <view class="item" data-type="foot" bindtap="onHandleTap">
+    <image class="icon" src="../../images/foot.png" />
+    <!-- <text class="label">足迹</text> -->
+  </view>
+  <view class="item" data-type="user" bindtap="onHandleTap">
+    <image class="icon" src="../../images/my.png" />
+    <!-- <text class="label">我的</text> -->
+  </view>
+</view>

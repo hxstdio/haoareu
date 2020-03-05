@@ -1,0 +1,7 @@
+<view class="photo-container" style="height:{{containerHeight}}rpx">
+  <image class="photo" src="{{imgUrl}}" mode="aspectFill" lazy-load bindload="onHandleLoad"></image>
+  <view class="photo placeholder {{show ? 'disapear' : ''}}"></view>
+  <view wx:if="{{desc}}" class="desc">
+    <text class="desc-txt">@ {{desc}}</text>
+  </view>
+</view>

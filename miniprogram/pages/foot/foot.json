@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "article": "../../components/article/article",
+    "result": "../../components/result/result"
+  },
+  "navigationBarTitleText": "足迹"
+}

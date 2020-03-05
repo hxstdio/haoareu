@@ -1,0 +1,44 @@
+<view class="visitor-container {{isScrolled ? 'scrolled' : ''}}" animation="{{animationObj}}">
+  <view class="content-wrap" bind:touchstart="onHandleTouchStart" bind:touchend="onHandldTouchEnd">
+    <view class="mask"></view>
+    <image class="photo" src="/images/bg.jpeg" mode="aspectFill" lazy-load></image>
+    <view class="author-wrap">
+      <image class="author" src="/images/author.jpeg" mode="aspectFill" lazy-load bindtap="onHandleSwiper"></image>
+      <view>
+        <text class="txt">小夏来了, </text>
+        <text class="txt">80后 程序员</text>
+      </view>
+      <text class="txt likes">旅行、音乐、阅读、终身学习</text>
+      <view class="about-wrap">
+        <text class="txt about">这是我纪录生活和文字的地方，谢谢你的到来</text>
+      </view>
+    </view>
+    <image class="corner" src="/images/corner.png" mode="aspectFill" bindtap="onHandleTapSwiper"></image>
+  </view>
+
+  <view class="content-wrap message-wrap">
+    <scroll-view class="scroll-wrap" scroll-y>
+      <view class="msg-title" bindtap="onHandleSwiperBack">
+        <view class="title-wrap"><text class="msg-txt">留言板</text></view>
+        <image class="corner-rt" src="/images/corner-rt.png" mode="aspectFill"></image>
+        <image class="cat-pull" src="/images/cat-pull.png" mode="aspectFill"></image>
+      </view>
+      <block wx:for="{{messages}}" wx:key="_id">
+        <view class="msg-wrap">
+          <image class="visitor-author" src="{{item.avatarUrl}}" mode="aspectFill" lazy-load></image>
+          <view class="info-wrap">
+            <view class="name-wrap">
+              <text class="name">{{item.nick}}</text>
+            </view>
+            <text decode="{{true}}" class="msg-content">{{item.content}}</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+
+    <view class="message" bindtap="onHandleLeaveMsg">
+      <image animation="msgAnimationObj" class="msg-icon" src="/images/message.png" mode="aspectFill"></image>
+      <text class="leave-msg">留个爪</text>
+    </view>
+  </view>
+</view>

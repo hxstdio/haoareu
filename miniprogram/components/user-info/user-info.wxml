@@ -1,0 +1,20 @@
+<view class="user-container">
+  <view class="photo-info">
+    <image class="photo" src="{{userInfo.photo}}" mode="aspectFill" lazy-load></image>
+  </view>
+  <view class="user-info">
+    <text class="name">{{userInfo.name}}</text>
+    <text class="slogan">{{userInfo.slogan}}</text>
+    <view class="gender">
+      <image class="icon" src="../../images/male.png" />
+      <text>{{userInfo.age}}</text>
+      <text> | {{userInfo.constellation}}</text>
+    </view>
+    <view class="location">
+      <image class="icon" src="../../images/work.png" />
+      <text>{{userInfo.work}} | </text>
+      <image class="icon" src="../../images/location.png" />
+      <text>{{userInfo.city}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,78 @@
+.article-container{
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+}
+
+.full-container{
+  height: 100%;
+}
+
+.scroll-wrap{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24rpx 36rpx;
+  box-sizing: border-box;
+}
+
+.scroll-content{
+  font-size: 28rpx;
+  line-height: 48rpx;
+}
+
+.scroll-content-wrap{
+  flex: 1;
+  padding: 24rpx 36rpx;
+}
+
+.content-wrap{
+  padding: 24rpx 36rpx;
+  max-height: 80rpx;
+
+  overflow: hidden;
+  transition: max-height .7s ease-in-out;
+}
+
+.content {
+  font-size: 28rpx;
+  line-height: 48rpx;
+}
+
+.action-bar{
+  height: 50rpx;
+  padding: 12rpx 36rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1rpx dashed #CCC;
+}
+
+.extend-txt{
+  font-size: 24rpx;
+}
+
+.extend{
+  max-height: 1000rpx;
+}
+
+.like-wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.like-icon{
+  width: 48rpx;
+  height: 42rpx;
+}
+
+.like-count{
+  font-size: 24rpx;
+}
+

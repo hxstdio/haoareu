@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "photo-container": "../photo/photo",
+    "video-container": "../video/video",
+    "article-title": "../article-title/article-title"
+  }
+}
