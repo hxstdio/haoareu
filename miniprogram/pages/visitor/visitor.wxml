@@ -5,12 +5,11 @@
     <view class="author-wrap">
       <image class="author" src="/images/author.jpeg" mode="aspectFill" lazy-load bindtap="onHandleSwiper"></image>
       <view>
-        <text class="txt">小夏来了, </text>
-        <text class="txt">80后 程序员</text>
+        <text class="txt">{{user}}</text>
       </view>
-      <text class="txt likes">旅行、音乐、阅读、终身学习</text>
+      <text class="txt likes">{{interests}}</text>
       <view class="about-wrap">
-        <text class="txt about">这是我纪录生活和文字的地方，谢谢你的到来</text>
+        <text class="txt about">{{desc}}</text>
       </view>
     </view>
     <image class="corner" src="/images/corner.png" mode="aspectFill" bindtap="onHandleTapSwiper"></image>
@@ -36,9 +35,9 @@
       </block>
     </scroll-view>
 
-    <view class="message" bindtap="onHandleLeaveMsg">
+    <!-- <view class="message" bindtap="onHandleLeaveMsg">
       <image animation="msgAnimationObj" class="msg-icon" src="/images/message.png" mode="aspectFill"></image>
       <text class="leave-msg">留个爪</text>
-    </view>
+    </view> -->
   </view>
 </view>

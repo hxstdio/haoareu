@@ -44,8 +44,8 @@ Component({
           break;
         case 'user': 
           wx.navigateTo({
-            url: App.globalData.isOwner ? '/pages/user/user' : '/pages/visitor/visitor',
-            // url: !App.globalData.isOwner ? '/pages/user/user' : '/pages/visitor/visitor', // 调试visitor模式
+            // url: App.globalData.isOwner ? '/pages/user/user' : '/pages/visitor/visitor',
+            url: '/pages/visitor/visitor',
           })
           break;
         default :

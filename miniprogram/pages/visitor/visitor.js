@@ -14,6 +14,9 @@ Page({
     animationObj: {},
     msgAnimationObj: {},
     isScrolled: false,
+    user: '',
+    interests: '',
+    desc: '',
   },
 
   /**
@@ -24,10 +27,27 @@ Page({
       duration: 500,
       timingFunction: 'ease-in-out',
     });
+
+    this._loadData();
   },
 
   onShow: function() {
     this._loadMessage();
+  },
+
+  _loadData: function() {
+    requestCloud({
+      isShowLoading: false,
+      name: 'about',
+      data: {},
+      success: res => {
+        this.setData({
+          user: get(res, 'result.originRet.data.user', ''),
+          interests: get(res, 'result.originRet.data.interests', ''),
+          desc: get(res, 'result.originRet.data.desc', ''),
+        });
+      },
+    });
   },
 
   _loadMessage: function() {
@@ -103,9 +123,9 @@ Page({
     this.onHandleSwiper(false);
   },
 
-  onHandleLeaveMsg: function() {
-    wx.navigateTo({
-      url: '/pages/message/message',
-    });
-  },
+  // onHandleLeaveMsg: function() {
+  //   wx.navigateTo({
+  //     url: '/pages/message/message',
+  //   });
+  // },
 })

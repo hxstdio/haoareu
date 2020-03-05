@@ -89,8 +89,8 @@ Page({
                 autoRotate: false,
                 duration: 300,
               });
-            // }, SEQUENCE_STEP_DURATION);
-          }, SEQUENCE_STEP_DURATION * index);
+            }, SEQUENCE_STEP_DURATION);
+          // }, SEQUENCE_STEP_DURATION * index);
           })(i);
         }
       }

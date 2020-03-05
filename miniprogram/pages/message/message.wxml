@@ -1,8 +1,0 @@
-<view class="message-container">
-  <view class="textarea-wrap">
-    <textarea class="textarea" placeholder="写点什么留言呢..." maxlength="{{300}}" bindblur="onHandleInputPause" bindconfirm="onHandleInputComplete"/>
-  </view>
-  <view class="btn-wrap">
-    <button class="submit-btn" open-type="getUserInfo" type="primary" size="default" bindtap="onHandleSubmit">提交</button>
-  </view>  
-</view>

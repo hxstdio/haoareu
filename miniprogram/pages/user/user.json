@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "user-info": "../../components/user-info/user-info",
-    "photo-container": "../../components/photo/photo",
-    "video-container": "../../components/video/video"
-  },
-  "navigationBarTitleText": "新建日志"
-}
