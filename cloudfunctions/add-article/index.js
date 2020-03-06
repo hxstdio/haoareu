@@ -26,6 +26,7 @@ exports.main = async (event, context) => {
         title: '',
         type,
         isPoi,
+        likes: 0,
         createdTime: Date.now()
       }
     });

@@ -4,6 +4,7 @@ import throttle from '../../utils/lodash.throttle.js';
 import { requestCloud } from '../../utils/api.js';
 const App = getApp();
 const PAGE_SIZE = 2;
+const FIRST_PAGE_NUM = 1;
 
 Page({
   scrollTop: 0,
@@ -12,13 +13,17 @@ Page({
   data: {
     isHideToolBar: false,
     noMoreResult: false,
-    currentPageNum: 1,
+    currentPageNum: FIRST_PAGE_NUM,
     list: [],
     isError: false,
   },
 
-  onLoad: function (options) {
-    this.loadData(this.data.currentPageNum);
+  onShow: function() {
+    this.setData({
+      currentPageNum: FIRST_PAGE_NUM,
+    }, () => {
+      this.loadData(FIRST_PAGE_NUM);
+    });
   },
 
   loadData: function(pageNum) {
@@ -41,7 +46,7 @@ Page({
           const totalPage = get(res, 'result.totalPage');
           const pageNum = get(res, 'result.pageNum');
           this.setData({
-            list: [].concat(this.data.list, currentPageData),
+            list: pageNum === FIRST_PAGE_NUM ? currentPageData : [].concat(this.data.list, currentPageData),
             noMoreResult: pageNum === totalPage,
             currentPageNum: pageNum,
           });

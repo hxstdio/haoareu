@@ -34,6 +34,7 @@ exports.main = async (event, context) => {
     const skip = (pageNum - 1) * pageSize
     console.log(`get list with pageNum:${pageNum}, pageSize:${pageSize}, skip:${skip}, limit:${dataSize}`)
     const result = await db.collection(openid)
+      .orderBy('createdTime', 'desc')
       .skip(skip)
       .limit(dataSize)
       .get()
