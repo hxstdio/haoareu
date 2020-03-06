@@ -57,7 +57,7 @@
 }
 
 .extend{
-  max-height: 1000rpx;
+  max-height: 3000rpx;
 }
 
 .like-wrap{
