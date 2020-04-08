@@ -5,7 +5,7 @@
   </view>
   <view class="right">
     <image wx:if="{{weatherIcon}}" class="weather-icon" src="{{weatherIcon}}" mode="scaleToFill"></image>
-    <text wx:if="{{temperature}}" class="info">{{temperature}}℃ </text>
-    <text wx:if="{{desc}}" class="info">{{desc}}</text>
+    <text wx:if="{{temperature}}" class="info temperature">{{temperature}}℃ </text>
+    <text wx:if="{{desc}}" class="info desc">{{desc}}</text>
   </view>
 </view>

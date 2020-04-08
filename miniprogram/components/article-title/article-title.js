@@ -28,16 +28,14 @@ Component({
     },
     temperature: {
       type: String
-    },
-    weatherIcon: {
-      type: String
-    },
+    }
   },
 
   data: {
     day: '',
     month: '',
     year: '',
+    weatherIcon: '',
   },
 
   methods: {
